@@ -30,7 +30,9 @@ app.use(function (req, res, next) {
   next();
 });
 // app.use(require(""));
-app.get("/", require("./routes/characters"));
+app.get("/getCharacters", require("./routes/characters"));
+app.post("/addUser", require("./routes/users"));
+app.post("/validateUser", require("./routes/users"));
 
 const PORT = process.env.PORT || 5000;
 
